@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: radial-gradient(circle at top left, #2b0040, #1a0026, #000);
+  min-height: 100vh;
+  animation: fadebg 4s infinite;
+  padding-bottom: 80px;
+}
+@keyframes fadebg {
+  0% {
+    background: radial-gradient(circle at top left, #3b005f, #1a0026, #000);
+  }
+  50% {
+    background: radial-gradient(circle at bottom right, #1a0026, #3b005f, #000);
+  }
+}
+nav {
+  background-color: rgba(225, 225, 225, 0.05);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  display: block;
+  text-align: center;
+}
+nav a:hover {
+  color: rgb(213, 93, 146);
+}
+.fadein {
+  text-align: center;
+}
+.fadein .welcome {
+  padding-top: 20px;
+  margin: 70px;
+  color: pink;
+}
+.fadein .quote {
+  color: rgb(211, 166, 211);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.fadeinq {
+  margin: 160px;
+  text-align: center;
+}
+.fadeinq blockquote {
+  font-size: 1.1rem;
+  color: thistle;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+footer {
+  text-align: center;
+  color: rgb(177, 177, 177);
+}
+.fadein {
+  opacity: 0;
+  animation: fadein 1.5s ease-in-out forwards;
+}
+.fadeinq {
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadein .songh {
+  padding-top: 60px;
+  margin: 70px;
+  color: pink;
+}
+.song {
+  margin-bottom: 10rem;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.card-1,
+.card-2,
+.card-3 {
+  background-color: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  max-width: 14rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.card-1:hover,
+.card-2:hover,
+.card-3:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(247, 37, 133, 0.25);
+}
+.card-1 img,
+.card-2 img,
+.card-3 img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+}
+.card-1 p,
+.card-2 p,
+.card-3 p {
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 14px;
+}
+.card-1,
+.card-3 {
+  position: relative;
+  top: 2rem;
+}
+.card-1 audio,
+.card-2 audio,
+.card-3 audio {
+  margin: 0;
+  width: 90%;
+  opacity: 0.5;
+}
+.hearts-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.heart {
+  position: absolute;
+  bottom: -60px;
+  opacity: 0;
+  animation: floatHeart linear infinite;
+}
+.heart:nth-child(1) {
+  left: 5%;
+  font-size: 1rem;
+  animation-duration: 8s;
+  animation-delay: 0s;
+  color: #f72585;
+}
+.heart:nth-child(2) {
+  left: 15%;
+  font-size: 1.6rem;
+  animation-duration: 10s;
+  animation-delay: 1.5s;
+  color: #c471ed;
+}
+.heart:nth-child(3) {
+  left: 25%;
+  font-size: 1.2rem;
+  animation-duration: 7s;
+  animation-delay: 3s;
+  color: #f72585;
+}
+.heart:nth-child(4) {
+  left: 35%;
+  font-size: 2rem;
+  animation-duration: 12s;
+  animation-delay: 0.5s;
+  color: #c471ed;
+}
+.heart:nth-child(5) {
+  left: 48%;
+  font-size: 1rem;
+  animation-duration: 9s;
+  animation-delay: 2s;
+  color: #f72585;
+}
+.heart:nth-child(6) {
+  left: 58%;
+  font-size: 1.8rem;
+  animation-duration: 11s;
+  animation-delay: 4s;
+  color: #c471ed;
+}
+.heart:nth-child(7) {
+  left: 68%;
+  font-size: 1.3rem;
+  animation-duration: 8s;
+  animation-delay: 1s;
+  color: #f72585;
+}
+.heart:nth-child(8) {
+  left: 77%;
+  font-size: 1rem;
+  animation-duration: 10s;
+  animation-delay: 3.5s;
+  color: #c471ed;
+}
+.heart:nth-child(9) {
+  left: 86%;
+  font-size: 1.5rem;
+  animation-duration: 9s;
+  animation-delay: 2.5s;
+  color: #f72585;
+}
+.heart:nth-child(10) {
+  left: 94%;
+  font-size: 1.2rem;
+  animation-duration: 7s;
+  animation-delay: 0.8s;
+  color: #c471ed;
+}
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(20deg);
+    opacity: 0;
+  }
+}
+.fadein .galleryh {
+  padding-top: 60px;
+  margin: 70px;
+  color: pink;
+}
+
+.gallery-content {
+  padding: 25px;
+}
+.img-landscape {
+  width: 640px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 5px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.img-portrait {
+  width: 360px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 5px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.img-landscape:hover,
+.img-portrait:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(247, 37, 133, 0.25);
+}
+
+.fadein .galleryh {
+  padding-top: 60px;
+  margin: 70px;
+  color: pink;
+}
+.fadein .messageh {
+  padding-top: 60px;
+  margin: 70px;
+  color: pink;
+}
+.container {
+  min-height: 37rem;
+  height: auto;
+  background-color: rgba(134, 73, 167, 0.201);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 33px;
+  width: 36rem;
+  justify-self: center;
+  box-shadow: 0 12px 32px rgba(247, 37, 133, 0.25);
+}
+.message-content {
+  margin: 20px;
+  color: thistle;
+}
+.mescontent {
+  color: rgb(211, 166, 211);
+}
+.reasonsh {
+  padding-top: 60px;
+  margin: 70px;
+  color: pink;
+}
+.reasons {
+  text-align: center;
+  color: white;
+  position: relative;
+  min-height: 100vh;
+}
+.reason {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  gap: 12px 18px;
+}
+.reasonsd {
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  opacity: 0.95;
+  background-color: rgba(255, 255, 255, 0.097);
+  padding: 10px 12px;
+  border-radius: 8px;
+}
